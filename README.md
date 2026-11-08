@@ -111,9 +111,7 @@ Aplikasi telah mengimplementasikan seluruh alur yang ada pada wireframe resmi:
 
 ---
 
-## 📷 Tangkapan Layar (Screenshots)
-
-*(Tambahkan screenshot tampilan aplikasi kamu di sini setelah di-push ke GitHub)*
+## 📷 Screenshots
 
 | Welcome / Splash | Sign Up Choice | Login Screen | 
 | :---: | :---: | :---: |
@@ -129,7 +127,7 @@ Aplikasi telah mengimplementasikan seluruh alur yang ada pada wireframe resmi:
 
 | Profile |
 | :---: |
-| ![Detail](648shots_so.png) |
+| ![Profile](6shots_so.png) |
 
 ---
 
