@@ -119,7 +119,7 @@ Aplikasi telah mengimplementasikan seluruh alur yang ada pada wireframe resmi:
 | :---: | :---: | :---: |
 | ![Welcome](572shots_so.png) | ![Sign Up](929shots_so.png) | ![Login](159shots_so.png) |
 
-| Register Screen | Home Screen | | Detail Produk |
+| Register Screen | Home Screen | Detail Produk |
 | :---: |  :---: |  :---: |
 | ![Register](952shots_so.png) | ![Home](128shots_so.png) | ![Product](8shots_so.png) |
 
