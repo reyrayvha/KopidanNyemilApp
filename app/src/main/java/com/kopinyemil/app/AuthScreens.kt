@@ -13,6 +13,9 @@ import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -203,8 +206,9 @@ fun LoginScreen(
     onLogin: () -> Unit,
     onGoRegister: () -> Unit
 ) {
-    var email by remember { mutableStateOf("hani@email.com") }
-    var password by remember { mutableStateOf("123456") }
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    var passwordVisible by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf("") }
 
     Box(
@@ -286,8 +290,17 @@ fun LoginScreen(
                 onValueChange = { password = it; error = "" },
                 label = { Text("Password") },
                 leadingIcon = { Icon(Icons.Filled.Lock, contentDescription = null, tint = TextMuted) },
+                trailingIcon = {
+                    IconButton(onClick = { passwordVisible = !passwordVisible }) {
+                        Icon(
+                            imageVector = if (passwordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff,
+                            contentDescription = if (passwordVisible) "Sembunyikan password" else "Tampilkan password",
+                            tint = TextMuted
+                        )
+                    }
+                },
                 modifier = Modifier.fillMaxWidth(),
-                visualTransformation = PasswordVisualTransformation(),
+                visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                 shape = RoundedCornerShape(16.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedBorderColor = DarkButton,
@@ -355,6 +368,8 @@ fun RegisterScreen(
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var confirmPassword by remember { mutableStateOf("") }
+    var passwordVisible by remember { mutableStateOf(false) }
+    var confirmPasswordVisible by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf("") }
 
     Box(
@@ -450,8 +465,17 @@ fun RegisterScreen(
                 onValueChange = { password = it; error = "" },
                 label = { Text("Password (min. 6 karakter)") },
                 leadingIcon = { Icon(Icons.Filled.Lock, contentDescription = null, tint = TextMuted) },
+                trailingIcon = {
+                    IconButton(onClick = { passwordVisible = !passwordVisible }) {
+                        Icon(
+                            imageVector = if (passwordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff,
+                            contentDescription = null,
+                            tint = TextMuted
+                        )
+                    }
+                },
                 modifier = Modifier.fillMaxWidth(),
-                visualTransformation = PasswordVisualTransformation(),
+                visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                 shape = RoundedCornerShape(16.dp),
                 colors = fieldColors,
                 singleLine = true
@@ -464,8 +488,17 @@ fun RegisterScreen(
                 onValueChange = { confirmPassword = it; error = "" },
                 label = { Text("Konfirmasi Password") },
                 leadingIcon = { Icon(Icons.Filled.Lock, contentDescription = null, tint = TextMuted) },
+                trailingIcon = {
+                    IconButton(onClick = { confirmPasswordVisible = !confirmPasswordVisible }) {
+                        Icon(
+                            imageVector = if (confirmPasswordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff,
+                            contentDescription = null,
+                            tint = TextMuted
+                        )
+                    }
+                },
                 modifier = Modifier.fillMaxWidth(),
-                visualTransformation = PasswordVisualTransformation(),
+                visualTransformation = if (confirmPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                 shape = RoundedCornerShape(16.dp),
                 colors = fieldColors,
                 singleLine = true
