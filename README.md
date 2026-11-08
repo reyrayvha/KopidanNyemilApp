@@ -119,11 +119,11 @@ Aplikasi telah mengimplementasikan seluruh alur yang ada pada wireframe resmi:
 | :---: | :---: | :---: |
 | ![Welcome](572shots_so.png) | ![Sign Up](929shots_so.png) | ![Login](159shots_so.png) |
 
-| Register Screen | Home Screen |
-| :---: |  :---: |
-| ![Register](952shots_so.png) | ![Home](947shots_so.png) |
+| Register Screen | Home Screen | | Detail Produk |
+| :---: |  :---: |  :---: |
+| ![Register](952shots_so.png) | ![Home](128shots_so.png) | ![Product](8shots_so.png) |
 
-| Detail Produk | Detail Pesanan | Alamat Pengiriman | Konfirmasi Pesanan |
+| Detail Pesanan | Alamat Pengiriman | Konfirmasi Pesanan |
 | :---: | :---: | :---: | :---: |
 | ![Detail]() | ![Cart](docs/screenshots/cart.png) | ![Address](docs/screenshots/address.png) | ![Confirmation](docs/screenshots/confirmation.png) |
 
