@@ -113,9 +113,8 @@ fun HomeScreen(
 
             // Bar Tabs Kategori
             LazyRow(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 20.dp),
+                modifier = Modifier.fillMaxWidth(),
+                contentPadding = PaddingValues(horizontal = 20.dp),
                 horizontalArrangement = Arrangement.spacedBy(16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -152,10 +151,16 @@ fun HomeScreen(
                 "All" -> {
                     // Seksi Coffee
                     if (coffeeList.isNotEmpty()) {
-                        Column(modifier = Modifier.padding(horizontal = 20.dp)) {
-                            SectionHeader(title = "Coffee", action = "See categories", onActionClick = { vm.activeTab = "Coffee" })
+                        Column(modifier = Modifier.fillMaxWidth()) {
+                            Box(modifier = Modifier.padding(horizontal = 20.dp)) {
+                                SectionHeader(title = "Coffee", action = "See categories", onActionClick = { vm.activeTab = "Coffee" })
+                            }
                             Spacer(Modifier.height(12.dp))
-                            LazyRow(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                            LazyRow(
+                                modifier = Modifier.fillMaxWidth(),
+                                contentPadding = PaddingValues(horizontal = 20.dp),
+                                horizontalArrangement = Arrangement.spacedBy(14.dp)
+                            ) {
                                 items(coffeeList, key = { it.id }) { item ->
                                     ProductCard(
                                         item = item,
@@ -171,10 +176,16 @@ fun HomeScreen(
 
                     // Seksi Non Coffee
                     if (nonCoffeeList.isNotEmpty()) {
-                        Column(modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp)) {
-                            SectionHeader(title = "Non Coffee", action = "See categories", onActionClick = { vm.activeTab = "Non Coffee" })
+                        Column(modifier = Modifier.padding(vertical = 4.dp).fillMaxWidth()) {
+                            Box(modifier = Modifier.padding(horizontal = 20.dp)) {
+                                SectionHeader(title = "Non Coffee", action = "See categories", onActionClick = { vm.activeTab = "Non Coffee" })
+                            }
                             Spacer(Modifier.height(12.dp))
-                            LazyRow(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                            LazyRow(
+                                modifier = Modifier.fillMaxWidth(),
+                                contentPadding = PaddingValues(horizontal = 20.dp),
+                                horizontalArrangement = Arrangement.spacedBy(14.dp)
+                            ) {
                                 items(nonCoffeeList, key = { it.id }) { item ->
                                     ProductCard(
                                         item = item,
@@ -190,10 +201,16 @@ fun HomeScreen(
 
                     // Seksi Meals
                     if (mealsList.isNotEmpty()) {
-                        Column(modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp)) {
-                            SectionHeader(title = "Meals", action = "See categories", onActionClick = { vm.activeTab = "Meals" })
+                        Column(modifier = Modifier.padding(vertical = 4.dp).fillMaxWidth()) {
+                            Box(modifier = Modifier.padding(horizontal = 20.dp)) {
+                                SectionHeader(title = "Meals", action = "See categories", onActionClick = { vm.activeTab = "Meals" })
+                            }
                             Spacer(Modifier.height(12.dp))
-                            LazyRow(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                            LazyRow(
+                                modifier = Modifier.fillMaxWidth(),
+                                contentPadding = PaddingValues(horizontal = 20.dp),
+                                horizontalArrangement = Arrangement.spacedBy(14.dp)
+                            ) {
                                 items(mealsList, key = { it.id }) { item ->
                                     ProductCard(
                                         item = item,
@@ -209,10 +226,16 @@ fun HomeScreen(
 
                     // Seksi Desserts
                     if (dessertsList.isNotEmpty()) {
-                        Column(modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp)) {
-                            SectionHeader(title = "Desserts", action = "See categories", onActionClick = { vm.activeTab = "Desserts" })
+                        Column(modifier = Modifier.padding(vertical = 4.dp).fillMaxWidth()) {
+                            Box(modifier = Modifier.padding(horizontal = 20.dp)) {
+                                SectionHeader(title = "Desserts", action = "See categories", onActionClick = { vm.activeTab = "Desserts" })
+                            }
                             Spacer(Modifier.height(12.dp))
-                            LazyRow(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                            LazyRow(
+                                modifier = Modifier.fillMaxWidth(),
+                                contentPadding = PaddingValues(horizontal = 20.dp),
+                                horizontalArrangement = Arrangement.spacedBy(14.dp)
+                            ) {
                                 items(dessertsList, key = { it.id }) { item ->
                                     ProductCard(
                                         item = item,
