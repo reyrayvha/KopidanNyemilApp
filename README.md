@@ -115,8 +115,8 @@ Aplikasi telah mengimplementasikan seluruh alur yang ada pada wireframe resmi:
 
 *(Tambahkan screenshot tampilan aplikasi kamu di sini setelah di-push ke GitHub)*
 
-| Welcome / Splash | Sign Up Choice | Login Screen | Home Screen |
-| :---: | :---: | :---: | :---: |
+| Welcome / Splash | Sign Up Choice | Login Screen | Register Screen | Home Screen |
+| :---: | :---: | :---: | :---: |  :---: |
 | ![Welcome](572shots_so.png) | ![Sign Up](929shots_so.png) | ![Login](159shots_so.png) | ![Register](952shots_so.png) | ![Home](947shots_so.png) |
 
 | Detail Produk | Detail Pesanan | Alamat Pengiriman | Konfirmasi Pesanan |
