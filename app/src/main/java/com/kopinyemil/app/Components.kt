@@ -312,7 +312,9 @@ fun AppBottomBar(
             colors = NavigationBarItemDefaults.colors(
                 selectedIconColor = DarkButton,
                 selectedTextColor = DarkButton,
-                indicatorColor = WarmBeige
+                unselectedIconColor = TextMuted,
+                unselectedTextColor = TextMuted,
+                indicatorColor = Color.Transparent
             )
         )
         NavigationBarItem(
@@ -320,7 +322,16 @@ fun AppBottomBar(
             onClick = onOrder,
             icon = { 
                 if (cartCount > 0) {
-                    BadgedBox(badge = { Badge { Text(cartCount.toString()) } }) {
+                    BadgedBox(
+                        badge = {
+                            Badge(
+                                containerColor = Color(0xFFD32F2F),
+                                contentColor = Color.White
+                            ) {
+                                Text(cartCount.toString(), fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                            }
+                        }
+                    ) {
                         Icon(Icons.Filled.ShoppingBag, contentDescription = "Order")
                     }
                 } else {
@@ -331,7 +342,9 @@ fun AppBottomBar(
             colors = NavigationBarItemDefaults.colors(
                 selectedIconColor = DarkButton,
                 selectedTextColor = DarkButton,
-                indicatorColor = WarmBeige
+                unselectedIconColor = TextMuted,
+                unselectedTextColor = TextMuted,
+                indicatorColor = Color.Transparent
             )
         )
         NavigationBarItem(
@@ -342,7 +355,9 @@ fun AppBottomBar(
             colors = NavigationBarItemDefaults.colors(
                 selectedIconColor = DarkButton,
                 selectedTextColor = DarkButton,
-                indicatorColor = WarmBeige
+                unselectedIconColor = TextMuted,
+                unselectedTextColor = TextMuted,
+                indicatorColor = Color.Transparent
             )
         )
     }

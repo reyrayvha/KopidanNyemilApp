@@ -1130,24 +1130,32 @@ fun OrderDetailScreen(
                                         // Stepper Kuantitas (+/-)
                                         Row(
                                             verticalAlignment = Alignment.CenterVertically,
-                                            horizontalArrangement = Arrangement.spacedBy(6.dp)
+                                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                            modifier = Modifier.padding(start = 6.dp)
                                         ) {
                                             Box(
                                                 modifier = Modifier
-                                                    .size(28.dp)
-                                                    .clip(RoundedCornerShape(6.dp))
-                                                    .border(1.dp, PillBorder, RoundedCornerShape(6.dp))
+                                                    .size(30.dp)
+                                                    .clip(CircleShape)
+                                                    .border(1.2.dp, DarkButton, CircleShape)
                                                     .clickable { vm.updateCartQuantity(cartItem.id, cartItem.quantity - 1) },
                                                 contentAlignment = Alignment.Center
                                             ) {
-                                                Icon(Icons.Filled.Remove, contentDescription = "Kurang", tint = PillTextUnselected, modifier = Modifier.size(14.dp))
+                                                Icon(Icons.Filled.Remove, contentDescription = "Kurang", tint = DarkButton, modifier = Modifier.size(14.dp))
                                             }
-                                            Text("${cartItem.quantity}", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = TextDark)
+                                            Text(
+                                                text = "${cartItem.quantity}",
+                                                fontWeight = FontWeight.Bold,
+                                                fontSize = 15.sp,
+                                                color = TextDark,
+                                                modifier = Modifier.widthIn(min = 14.dp),
+                                                textAlign = TextAlign.Center
+                                            )
                                             Box(
                                                 modifier = Modifier
-                                                    .size(28.dp)
-                                                    .clip(RoundedCornerShape(6.dp))
-                                                    .background(CaramelGold)
+                                                    .size(30.dp)
+                                                    .clip(CircleShape)
+                                                    .background(DarkButton)
                                                     .clickable { vm.updateCartQuantity(cartItem.id, cartItem.quantity + 1) },
                                                 contentAlignment = Alignment.Center
                                             ) {
@@ -1166,16 +1174,9 @@ fun OrderDetailScreen(
                         }
                     }
 
-                    // Button Lanjut ke Alamat & Pembayaran
-                    Surface(color = Color.White, shadowElevation = 8.dp) {
-                        Column(
-                            modifier = Modifier
-                                .navigationBarsPadding()
-                                .padding(16.dp)
-                        ) {
-                            PrimaryButton("Lanjut ke Alamat & Pembayaran", onClick = onOpenAddress)
-                        }
-                    }
+                    // Button Lanjut ke Pembayaran
+                    Spacer(Modifier.height(4.dp))
+                    PrimaryButton("Lanjut ke Pembayaran", onClick = onOpenAddress)
                 }
             }
         }
