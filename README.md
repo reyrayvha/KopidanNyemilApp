@@ -124,8 +124,12 @@ Aplikasi telah mengimplementasikan seluruh alur yang ada pada wireframe resmi:
 | ![Register](952shots_so.png) | ![Home](128shots_so.png) | ![Product](8shots_so.png) |
 
 | Detail Pesanan | Alamat Pengiriman | Konfirmasi Pesanan |
-| :---: | :---: | :---: | :---: |
-| ![Detail]() | ![Cart](docs/screenshots/cart.png) | ![Address](docs/screenshots/address.png) | ![Confirmation](docs/screenshots/confirmation.png) |
+| :---: | :---: | :---: |
+| ![Detail](648shots_so.png) | ![Address](782shots_so.png) | ![Confirmation](828shots_so.png) |
+
+| Profile |
+| :---: |
+| ![Detail](648shots_so.png) |
 
 ---
 
