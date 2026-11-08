@@ -39,7 +39,8 @@ data class MenuItem(
     val imageUrl: String = "",
     val imageRes: Int = 0,
     val priceDisplay: String = "Rp 0",
-    val emoji: String = "☕"
+    val emoji: String = "☕",
+    val philosophy: String = ""
 )
 
 data class User(
@@ -83,7 +84,8 @@ object DummyData {
             flavors = listOf("Hazelnut", "Caramel", "Vanilla"),
             volume = "160 ml",
             imageRes = R.drawable.americano,
-            emoji = "☕"
+            emoji = "☕",
+            philosophy = "Lahir dari masa Perang Dunia II saat tentara Amerika menyiram espresso dengan air panas agar rasanya lebih ringan. Melambangkan kesederhanaan, kejujuran, dan keteguhan hati dalam menghadapi tantangan."
         ),
         MenuItem(
             id = 2,
@@ -98,7 +100,8 @@ object DummyData {
             flavors = listOf("Hazelnut", "Caramel", "Vanilla"),
             volume = "160 ml",
             imageRes = R.drawable.cappucino,
-            emoji = "☕"
+            emoji = "☕",
+            philosophy = "Diinspirasi dari jubah cokelat rahib Capuchin di Italia. Keseimbangan sempurna antara pahitnya espresso dan manisnya foam susu melambangkan harmoni dalam kehidupan."
         ),
         MenuItem(
             id = 3,
@@ -113,7 +116,8 @@ object DummyData {
             flavors = listOf("Vanilla", "Caramel", "Hazelnut"),
             volume = "180 ml",
             imageRes = R.drawable.matcha,
-            emoji = "🍵"
+            emoji = "🍵",
+            philosophy = "Terinspirasi dari tradisi Zen Jepang (Chanoyu). Warna hijau zamrud melambangkan ketenangan jiwa, kesabaran dalam proses, dan keselarasan dengan alam."
         ),
         MenuItem(
             id = 4,
@@ -128,7 +132,8 @@ object DummyData {
             flavors = listOf("Hazelnut", "Caramel", "Vanilla"),
             volume = "200 ml",
             imageRes = R.drawable.macchiato,
-            emoji = "☕"
+            emoji = "☕",
+            philosophy = "'Macchiato' berarti 'ditandai'. Lapisan vanila, susu, espresso, dan karamel mengajarkan bahwa keindahan hidup tercipta dari pengalaman yang berlapis-lapis."
         ),
         MenuItem(
             id = 5,
@@ -143,7 +148,8 @@ object DummyData {
             flavors = listOf("Vanilla sweet cream", "Caramel", "Classic"),
             volume = "220 ml",
             imageRes = R.drawable.cold_brew,
-            emoji = "🧊"
+            emoji = "🧊",
+            philosophy = "Diseduh dingin selama 20 jam tanpa terburu-buru. Mengajarkan nilai kesabaran ekstra untuk mendapatkan hasil manis alami tanpa rasa asam yang tajam."
         ),
         MenuItem(
             id = 6,
@@ -158,7 +164,8 @@ object DummyData {
             flavors = listOf("Original", "Spicy"),
             volume = "1 pcs",
             imageRes = R.drawable.sandwich,
-            emoji = "🥪"
+            emoji = "🥪",
+            philosophy = "Perpaduan keahlian pastry Prancis dan selera gurih modern. Setiap lipatan lapisan renyah melambangkan kerja keras dan dedikasi dalam menciptakan kelezatan."
         ),
         MenuItem(
             id = 7,
@@ -173,7 +180,8 @@ object DummyData {
             flavors = listOf("Double Choc", "Walnut", "Sea Salt"),
             volume = "3 pcs",
             imageRes = R.drawable.coockies,
-            emoji = "🍪"
+            emoji = "🍪",
+            philosophy = "Biskuit cokelat klasik yang renyah di luar namun lembut di dalam. Mengingatkan kita bahwa kehangatan sejati selalu tersimpan di bagian terdalam."
         ),
         MenuItem(
             id = 8,
@@ -188,7 +196,8 @@ object DummyData {
             flavors = listOf("Butter", "Almond", "Chocolate"),
             volume = "1 pcs",
             imageRes = R.drawable.croissant,
-            emoji = "🥐"
+            emoji = "🥐",
+            philosophy = "Dibuat dari adonan mentega murni yang dipanggang berlapis. Melambangkan proses hidup yang membutuhkan waktu dan ketelitian untuk mekar dengan sempurna."
         ),
         MenuItem(
             id = 9,
@@ -203,7 +212,8 @@ object DummyData {
             flavors = listOf("Classic Dark", "Salted Caramel"),
             volume = "1 slice",
             imageRes = R.drawable.brownies,
-            emoji = "🍫"
+            emoji = "🍫",
+            philosophy = "Cokelat Belgia pekat yang padat dan manis. Melambangkan momen kebahagiaan manis yang mendalam di tengah kepenatan hari."
         ),
         MenuItem(
             id = 10,
@@ -218,7 +228,8 @@ object DummyData {
             flavors = listOf("Blueberry", "Choc Chip", "Banana"),
             volume = "1 pcs",
             imageRes = R.drawable.muffin,
-            emoji = "🧁"
+            emoji = "🧁",
+            philosophy = "Muffin empuk yang dipenuhi blueberry liar segar. Melambangkan kejutan manis yang selalu hadir jika kita bersyukur atas hal-hal kecil."
         ),
         MenuItem(
             id = 11,
@@ -233,7 +244,8 @@ object DummyData {
             flavors = listOf("Spicy", "Medium", "Mild"),
             volume = "1 portion",
             imageRes = R.drawable.nasi_goreng,
-            emoji = "🍛"
+            emoji = "🍛",
+            philosophy = "Hidangan kebanggaan Nusantara yang menyatukan berbagai bumbu rempah. Melambangkan persatuan dan kehangatan kebersamaan keluarga."
         ),
         MenuItem(
             id = 12,
@@ -248,7 +260,8 @@ object DummyData {
             flavors = listOf("Creamy", "Spicy"),
             volume = "1 portion",
             imageRes = R.drawable.spaghetti,
-            emoji = "🍝"
+            emoji = "🍝",
+            philosophy = "Resep klasik para pekerja tambang Italia ('Carbonaro'). Melambangkan kesederhanaan bahan yang mampu menghadirkan kelezatan mewah."
         ),
         MenuItem(
             id = 13,
@@ -263,7 +276,8 @@ object DummyData {
             flavors = listOf("Spicy", "Original"),
             volume = "1 portion",
             imageRes = R.drawable.chicken_katsu,
-            emoji = "🍛"
+            emoji = "🍛",
+            philosophy = "Perpaduan katsu renyah dan kuah kari rempah yang hangat. Melambangkan ketangguhan diri yang dibalut kelembutan rasa."
         ),
         MenuItem(
             id = 14,
@@ -278,7 +292,8 @@ object DummyData {
             flavors = listOf("Original", "Less Sugar"),
             volume = "180 ml",
             imageRes = R.drawable.lychee_tea,
-            emoji = "🍹"
+            emoji = "🍹",
+            philosophy = "Kesegaran teh es dipadu manisnya buah leci segar. Melambangkan kesegaran pikiran dan ketenangan jiwa di kala cuaca terik."
         ),
         MenuItem(
             id = 15,
@@ -293,7 +308,8 @@ object DummyData {
             flavors = listOf("Original", "Less Sugar"),
             volume = "180 ml",
             imageRes = R.drawable.thai_tea,
-            emoji = "🧋"
+            emoji = "🧋",
+            philosophy = "Teh hitam rempah beraroma khas dengan kelembutan susu kental manis. Melambangkan keberagaman budaya yang saling melengkapi."
         ),
         MenuItem(
             id = 16,
@@ -308,7 +324,8 @@ object DummyData {
             flavors = listOf("Original", "Less Sugar"),
             volume = "180 ml",
             imageRes = R.drawable.mango_tea,
-            emoji = "🥭"
+            emoji = "🥭",
+            philosophy = "Sentuhan tropis mangga manis dalam seduhan teh alami. Melambangkan semangat muda yang ceria dan penuh energi positif."
         ),
         MenuItem(
             id = 17,
@@ -323,7 +340,8 @@ object DummyData {
             flavors = listOf("Original", "Vanilla", "Extra Cream"),
             volume = "180 ml",
             imageRes = R.drawable.red_velvet,
-            emoji = "🍰"
+            emoji = "🍰",
+            philosophy = "Warna merah anggun berbalut krim lembut. Melambangkan cinta, kasih sayang, dan keanggunan rasa dalam setiap tegukan."
         ),
         MenuItem(
             id = 18,
@@ -338,7 +356,8 @@ object DummyData {
             flavors = listOf("Glazed", "Chocolate"),
             volume = "1 pcs",
             imageRes = R.drawable.bagel,
-            emoji = "🥯"
+            emoji = "🥯",
+            philosophy = "Bentuk melingkar tanpa putus melambangkan keberlanjutan kebahagiaan dan kehangatan yang tak pernah usai."
         )
     )
 

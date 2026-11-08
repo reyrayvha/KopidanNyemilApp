@@ -622,6 +622,7 @@ fun DetailScreen(
     var selectedSize by remember { mutableStateOf(item.sizes.firstOrNull() ?: "Short") }
     var selectedFlavor by remember { mutableStateOf(item.flavors.firstOrNull() ?: "Hazelnut") }
     var quantity by remember { mutableIntStateOf(1) }
+    var isExpanded by remember { mutableStateOf(false) }
     
     val sizePriceExtra = when (selectedSize) {
         "Short", "Single", "Regular", "Pack of 3", "Single slice" -> 0
@@ -823,10 +824,41 @@ fun DetailScreen(
                         Spacer(Modifier.height(6.dp))
 
                         Text(
-                            text = "${item.description} Congue... Read more",
+                            text = item.description,
                             fontSize = 13.sp,
-                            color = Color.White.copy(alpha = 0.8f),
+                            color = Color.White.copy(alpha = 0.85f),
                             lineHeight = 20.sp
+                        )
+
+                        if (isExpanded && item.philosophy.isNotBlank()) {
+                            Spacer(Modifier.height(12.dp))
+                            Text(
+                                "Filosofi & Cerita Rasa 📖",
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = CaramelGold
+                            )
+                            Spacer(Modifier.height(4.dp))
+                            Text(
+                                text = item.philosophy,
+                                fontSize = 13.sp,
+                                color = Color.White.copy(alpha = 0.9f),
+                                lineHeight = 20.sp,
+                                fontFamily = FontFamily.Serif
+                            )
+                        }
+
+                        Spacer(Modifier.height(8.dp))
+
+                        Text(
+                            text = if (isExpanded) "Read less ▲" else "Read more... ▼",
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = CaramelGold,
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(4.dp))
+                                .clickable { isExpanded = !isExpanded }
+                                .padding(vertical = 4.dp)
                         )
                     }
                 }
