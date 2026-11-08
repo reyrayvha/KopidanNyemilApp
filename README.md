@@ -98,7 +98,7 @@ Aplikasi telah mengimplementasikan seluruh alur yang ada pada wireframe resmi:
 
 1. **Clone Repository**:
    ```bash
-   git clone https://github.com/USERNAME_KAMU/KopiDanNyemil.git
+   git clone https://github.com/reyrayvha/KopiDanNyemil.git
    ```
 2. **Buka di Android Studio**:
    - Buka Android Studio (versi Ladybug / 2024.2+ direkomendasikan).
@@ -117,11 +117,11 @@ Aplikasi telah mengimplementasikan seluruh alur yang ada pada wireframe resmi:
 
 | Welcome / Splash | Sign Up Choice | Login Screen | Home Screen |
 | :---: | :---: | :---: | :---: |
-| ![Welcome](docs/screenshots/welcome.png) | ![Sign Up](docs/screenshots/signup.png) | ![Login](docs/screenshots/login.png) | ![Home](docs/screenshots/home.png) |
+| ![Welcome](572shots_so.png) | ![Sign Up](929shots_so.png) | ![Login](159shots_so.png) | ![Register](952shots_so.png) | ![Home](947shots_so.png)
 
 | Detail Produk | Detail Pesanan | Alamat Pengiriman | Konfirmasi Pesanan |
 | :---: | :---: | :---: | :---: |
-| ![Detail](docs/screenshots/detail.png) | ![Cart](docs/screenshots/cart.png) | ![Address](docs/screenshots/address.png) | ![Confirmation](docs/screenshots/confirmation.png) |
+| ![Detail]() | ![Cart](docs/screenshots/cart.png) | ![Address](docs/screenshots/address.png) | ![Confirmation](docs/screenshots/confirmation.png) |
 
 ---
 
