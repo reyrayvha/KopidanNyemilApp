@@ -70,7 +70,9 @@ fun PillChip(
             text = text,
             fontSize = 14.sp,
             fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
-            color = if (selected) Color.White else PillTextUnselected
+            color = if (selected) Color.White else PillTextUnselected,
+            maxLines = 1,
+            softWrap = false
         )
     }
 }

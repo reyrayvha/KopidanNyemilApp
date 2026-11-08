@@ -8,6 +8,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -791,10 +792,13 @@ fun DetailScreen(
                                 text = item.name,
                                 style = MaterialTheme.typography.titleLarge.copy(
                                     fontFamily = FontFamily.Serif,
-                                    fontSize = 26.sp,
+                                    fontSize = 24.sp,
                                     fontWeight = FontWeight.Bold
                                 ),
-                                color = Color.White
+                                color = Color.White,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .padding(end = 12.dp)
                             )
                             Text(
                                 text = currentPrice.toRupiah(),
@@ -802,7 +806,9 @@ fun DetailScreen(
                                     fontSize = 20.sp,
                                     fontWeight = FontWeight.Medium
                                 ),
-                                color = Color.White
+                                color = Color.White,
+                                maxLines = 1,
+                                softWrap = false
                             )
                         }
 
@@ -843,6 +849,9 @@ fun DetailScreen(
                     )
 
                     Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
                         horizontalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
                         item.sizes.forEach { size ->
@@ -865,7 +874,9 @@ fun DetailScreen(
                     )
 
                     Row(
-                        modifier = Modifier.fillMaxWidth(),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
                         horizontalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
                         item.flavors.forEach { flavor ->
